@@ -8,6 +8,14 @@
   "scripts": {
      "test": "jest"
    },
+  "keywords": [
+    "jsonapi",
+    "json-api",
+    "jsonapi-normalizer",
+    "json-normalize",
+    "json-api-simple-normalizer",
+    "simple-json-api-normalizer"
+  ],
   "devDependencies": {
     "jest": "^26.6.3"
   }
