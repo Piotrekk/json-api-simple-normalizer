@@ -23,22 +23,24 @@ describe('normalize', function() {
 
   it('should normalize resources array', function() {
     var response = {
-      data: [{
-        id: '1',
-        type: 'users',
-        attributes: {
-          first_name: 'Piotr',
-          last_name: 'Klupa',
+      data: [
+        {
+          id: '1',
+          type: 'users',
+          attributes: {
+            first_name: 'Piotr',
+            last_name: 'Klupa',
+          },
         },
-      },
-      {
-        id: '2',
-        type: 'users',
-        attributes: {
-          first_name: 'Jan',
-          last_name: 'Kowalski',
+        {
+          id: '2',
+          type: 'users',
+          attributes: {
+            first_name: 'Jan',
+            last_name: 'Kowalski',
+          },
         },
-      }]
+      ],
     };
 
     expect(normalize(response)).toEqual([
