@@ -1,0 +1,8 @@
+{
+  "name": "json-api-simple-normalizer",
+  "version": "1.0.0",
+  "description": "Simple normalizer for JSON:API specification objects",
+  "main": "index.js",
+  "author": "Piotr Klupa",
+  "license": "MIT"
+}
