@@ -69,11 +69,15 @@ function normalizeRelationships(id, type, response) {
     return {};
   }
 
-  const data = response.data.find(function(dataItem) {
-    return dataItem.id === id && dataItem.type === type;
-  });
+  if (Array.isArray(response.data)) {
+    const data = response.data.find(function(dataItem) {
+      return dataItem.id === id && dataItem.type === type;
+    });
+  
+    return buildRelationships(data.relationships, response.included);
+  }
 
-  return buildRelationships(data.relationships, response.included);
+  return buildRelationships(response.data.relationships, response.included);
 }
 
 
